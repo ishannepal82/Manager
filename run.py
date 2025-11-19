@@ -1,3 +1,5 @@
+from app.sniffer import start_sniffer
+
 def run_manager(inp:str):
     commands = [
         " 1.'drymode' : shows you the changes beforehand without actually making the changes",
@@ -11,10 +13,10 @@ def run_manager(inp:str):
             print("Running the Manager on DryMode!")
             
         elif inp == "organize":
+            if __name__ == "__main__":
+                path_to_sniff = "." 
+                start_sniffer(path_to_sniff)
             print("Running the Manager on Organizer Mode!")
-            
-        elif inp == "manager":
-            print("The Manager has been started!")
             
         elif inp == "--help":
             print("Welcome to the Manager (File Manager): ")
